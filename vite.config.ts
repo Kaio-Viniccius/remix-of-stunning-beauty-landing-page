@@ -7,6 +7,8 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { nitro } from "nitro/vite";
 
+const base = "/remix-of-stunning-beauty-landing-page/";
+
 export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
@@ -18,6 +20,7 @@ export default defineConfig({
     },
   },
   vite: {
+    base,
     plugins: [nitro({ preset: "node-server" })],
   },
 });
